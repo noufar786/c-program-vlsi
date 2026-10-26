@@ -1,13 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
-/* Call by Value */
 int addByValue(int a, int b)
 {
 int res;
 res = a + b;
 return res;
 }
-/* Call by Reference */
 void swapByReference(int *a, int *b)
 {
 int temp;
@@ -25,21 +23,17 @@ printf("Enter the first number: ");
 scanf("%d", &a);
 printf("Enter the second number: ");
 scanf("%d", &b);
-/* Pointer demonstration */
 ptr = &a;
 printf("\nPointer Demonstration:");
 printf("\nValue of a = %d", *ptr);
 printf("\nAddress of a = %p", (void *)ptr);
-/* Call by Value */
 res = addByValue(a, b);
 printf("\n\nCall by Value:");
 printf("\nSum = %d", res);
-/* Call by Reference */
 swapByReference(&a, &b);
 printf("\n\nCall by Reference:");
 printf("\nAfter swapping, first number = %d", a);
 printf("\nAfter swapping, second number = %d", b);
-/* Dynamic Memory Allocation */
 printf("\n\nDynamic Memory Allocation");
 printf("\nEnter the number of elements: ");
 scanf("%d", &n);
